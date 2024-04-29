@@ -8,8 +8,6 @@ tags:
   - text encoding
 ---
 
-# Importing scores csv file to ETL with Excel
-
 With new ETL, many would have suffered from uploading `.csv` file to ETL. Especially when if one worked student's scores on Excel. Long story short, this is problem of text encoding. ETL imports and exports `.csv` file with encoding `UTF-8 with BOM` (This is different from UTF-8 encoding, may not be relevant to topic though). When we save `.csv` file with Excel, it saves with encoding: ANSI and converting it with encoding utf8 or utf8 with BOM with text pad `save as` will solve problem. For those who needs deeper understanding look here: [About encoding](https://theonemanitdepartment.wordpress.com/2014/12/15/the-absolute-minimum-everyone-working-with-data-absolutely-positively-must-know-about-file-types-encoding-delimiters-and-data-types-no-excuses/)
 
 ## How to import `.csv` scores on ETL worked on Excel-like software.
