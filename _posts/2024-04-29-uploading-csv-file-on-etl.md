@@ -17,7 +17,7 @@ For those who needs deeper understanding look here:
 ## How to import `.csv` scores on ETL worked on Excel-like software.
 1. First row of csv file must be `Student`,`ID`,`SIS Login ID`,`Section` and scores to upload: 
    e.g. `midterm_question_1`, `midterm_question_2`,`total_score`.
-3. After that, next rows are data of student corresponding to first row.
+3. Next rows are data of student corresponding to first row.
 4. Filling all information, save csv file and open csv file with any text editor that can convert text encoding, e.g., text pad.
 5. Convert file into `utf8`.
 6. Upload .csv file and select columns you want to upload.
