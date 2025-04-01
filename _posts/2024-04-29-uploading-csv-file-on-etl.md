@@ -1,5 +1,5 @@
 ---
-title: 'Importing scores csv file on ETL'
+title: 'Uploading scores csv file on ETL'
 date: 2024-04-29
 permalink: /posts/2024/04/blog-post-1/
 tags:
