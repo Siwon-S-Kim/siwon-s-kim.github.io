@@ -7,25 +7,18 @@ tags:
   - SNU ETL (Canvas LMS)
   - text encoding
 ---
-This is article for TAs in SNU, or anyone using electronic learning system such as Canvas LMS.
-With new ETL, many would have suffered from uploading `.csv` file to ETL. Especially when if one worked student's scores on Excel. Long story short, this is problem of text encoding. ETL imports and exports `.csv` file with encoding `UTF-8 with BOM` (This is different from UTF-8 encoding, may not be relevant to topic though). When we save `.csv` file with Excel, it saves with encoding: ANSI and converting it with encoding utf8 or utf8 with BOM with text pad `save as` will solve problem. For those who needs deeper understanding look here: [About encoding](https://theonemanitdepartment.wordpress.com/2014/12/15/the-absolute-minimum-everyone-working-with-data-absolutely-positively-must-know-about-file-types-encoding-delimiters-and-data-types-no-excuses/)
+This is article for TAs in SNU, or anyone using electronic learning system, 'Canvas LMS'.
+Currently Canvas LMS has problem on uploading `.csv` files created with Excel, for updating
+grades. This is just problem of text encoding. ETL imports and exports `.csv` file with encoding
+`utf-8` but when we save `.csv` file with Excel, it saves with encoding: `ANSI`.
+For those who needs deeper understanding look here:
+[About encoding](https://theonemanitdepartment.wordpress.com/2014/12/15/the-absolute-minimum-everyone-working-with-data-absolutely-positively-must-know-about-file-types-encoding-delimiters-and-data-types-no-excuses/)
 
 ## How to import `.csv` scores on ETL worked on Excel-like software.
-### Delete everything unnecessary, and save with `.txt` with encoding "utf-8 with BOM".
-1. get `.csv` from ETL
-2. open it with Excel.
-3. Delete every information that is not relevant to this upload: e.g. previous scores, total scores. For our case it is as follows:
-   1. Delete 2nd and 3rd row, which corresponds to "Manual posting", Read only, possible points. i.e. delete every information except for first row(the header) and students.
-   2. Delete every column after Section (any columns after the ones that holding student information)
-4. Add scores for this upload. Column name at first row of the column and scores.
-5. Save it as `.`.csv``. Ignore Excel's warning "some feature might not be saved".
-6. Open it with text pad (메모장)
-7. Do, save-as with file type :`.txt` and with encoding: UTF-8 with BOM
-8. upload to ETL.
+1. First row of csv file must be `Student`,`ID`,`SIS Login ID`,`Section` and scores to upload: 
+   e.g. `midterm_question_1`, `midterm_question_2`,`total_score`.
+3. After that, next rows are data of student corresponding to first row.
+4. Filling all information, save csv file and open csv file with any text editor that can convert text encoding, e.g., text pad.
+5. Convert file into `utf8`.
+6. Upload .csv file and select columns you want to upload.
    
-## Remark
-- Any solution that does not change encoding of imported file would work. For example, if we edit imported `.csv` file with text editors, like notepad, notepad ++, Vim and vscode, it won't have problem. But this is almost same thing as entering scores in ETL website, and we need cleaning of our imported `.csv` file anyway(if we don't clean unnecessary columns, ETL ask you to select whether to ignore it or use it all by hand). 
-
-- If one wants to use python pandas module for their work and one need utf-8 with BOM, then try saving `.csv` file with `encoding='utf_8_sig'` will do.
-
-- But UTF-8 would work too on this case.
