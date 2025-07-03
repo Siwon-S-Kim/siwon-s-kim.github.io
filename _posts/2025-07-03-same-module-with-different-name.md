@@ -13,7 +13,7 @@ This is short article about problem I faced during AI-engineering.
 Model of `pytorch` is `torch.nn.Module` object in python and so as any layer inside the model, e.g. `Linear` layer.
 
 ## Problem
-For sake of convenience, I defined a submodule with only purpose of returning
+For sake of convenience, I defined a instance object of model, submodule with only purpose of returning
 it's child modules to the model. So, those child modules had two access,
 namely `self.submodule.child_module1` and `self.child_module1`. 
 This caused problem when loading checkpoint. 
