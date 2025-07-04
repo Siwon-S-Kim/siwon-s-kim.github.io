@@ -14,7 +14,7 @@ Model of `pytorch` is `torch.nn.Module` object in python and so as any layer ins
 
 ## Problem
 For sake of convenience, I defined a instance object of model, submodule with only purpose of returning
-it's child modules to the model. So, those child modules had two access,
+it's child modules to the model. And I have assigned those child modules as another instance variable, since they were needed, not the submodule returning them. So, without deleting the submodule, those child modules had two access,
 namely `self.submodule.child_module1` and `self.child_module1`. 
 This caused problem when loading checkpoint. 
 For both names were inside `.named_parameters()` even they are same object,
