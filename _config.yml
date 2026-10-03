@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Siwon Kim's webpage"
 title_separator          : "-"
 name                     : &name "Siwon Kim"
-description              : &description ""
+description              : &description "Personal website of Siwon Kim, postdoctoral researcher in data science and AI engineering at Seoul National University."
 url                      : https://siwon-s-kim.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "https://github.com/Siwon-S-Kim"
@@ -22,20 +22,20 @@ repository               : "https://github.com/Siwon-S-Kim"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "SW Kim"
+  name             : "Siwon Kim"
   pronouns         : # example: "she/her"  
-  bio              : "I am Ph.D student of Department of Mathematical Sciences, SNU. I study and practice data science, AI and applied algebraic topology"
+  bio              : "Postdoctoral researcher at the Research Institute of Basic Sciences, Seoul National University. I work on data science and AI engineering, focusing on ECG analysis and self-supervised representation learning."
   location         : "Seoul, Korea"
   employer         : "Seoul National University"
   uri              : # URL
-  email            : "null" 
+  email            : "siwon.kim@snu.ac.kr"
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : ""
+  googlescholar    : # URL
   impactstory      : # URL
-  orcid            : ""
-  pubmed           : ""
+  orcid            : "https://orcid.org/0009-0005-4330-3735"
+  pubmed           : # URL
   researchgate     : # URL
 
   # Repositories and software development
@@ -47,7 +47,7 @@ author:
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -280,7 +280,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Seoul # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
